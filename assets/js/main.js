@@ -46,8 +46,8 @@
 
   // Render project cards
   const grid = document.getElementById("projectsGrid");
-  if (grid && Array.isArray(window.projects || projects)) {
-    const list = window.projects || projects;
+  if (grid && typeof projects !== "undefined" && Array.isArray(projects)) {
+    const list = projects;
     list.forEach(function (p) {
       const card = document.createElement("article");
       card.className = "project-card reveal";
